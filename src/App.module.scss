@@ -1,0 +1,11 @@
+@use "./styles/_reset.css";
+@use "./styles/_vars";
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700&display=swap');
+
+.app {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  background: vars.$radial-gradient;
+  padding: 30px;
+}

@@ -1,0 +1,35 @@
+@use "../../styles/vars";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid vars.$header-outline;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.scoreContainer {
+  width: 80px;
+  height: 72px;
+  background: #f6f6f6;
+  color: vars.$score-text;
+  border-radius: 4px;
+  text-transform: uppercase;
+  padding: 14px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+}
+
+.score {
+  font-size: 2rem;
+  font-weight: 700;
+  color: vars.$dark-text
+}
