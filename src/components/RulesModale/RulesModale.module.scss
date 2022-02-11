@@ -1,0 +1,27 @@
+@use "../../styles/vars";
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: vars.$dark-text;
+  text-transform: uppercase;
+}
+
+.close {
+  background: transparent;
+  border: none;
+}
