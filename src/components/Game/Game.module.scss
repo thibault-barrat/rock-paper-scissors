@@ -1,0 +1,32 @@
+.game {
+  position: relative;
+}
+
+.background {
+  padding: 0 55px;
+  width: 100%;
+}
+
+.afterStepOne {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-auto-flow: column;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  p {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    margin-top: 25px
+  }
+}
+
+.computer {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background:  	hsl(220, 46%, 19%);
+}

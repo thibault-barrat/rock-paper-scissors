@@ -4,6 +4,7 @@ import Attribution from './components/Attribution';
 import Heading from './components/Heading';
 import Button from './components/Button';
 import RulesModale from './components/RulesModale';
+import Game from './components/Game';
 
 function App() {
   const [score, setScore] = useState(0);
@@ -12,6 +13,7 @@ function App() {
     <div className={styles.app}>
       {showRules && <RulesModale closeModale={setShowRules} />}
       <Heading score={score} />
+      <Game />
       <Button showModale={setShowRules} />
       <Attribution />
     </div>
