@@ -19,3 +19,16 @@
     color: vars.$dark-text;
   }
 }
+
+.inverted {
+  background: #fff;
+  border: 2px solid #fff;
+  color: vars.$dark-text;
+  font-weight: 600;
+  padding: 14px 55px;
+  &:hover {
+    background: transparent;
+    border-color: vars.$header-outline;
+    color: #fff;
+  }
+}

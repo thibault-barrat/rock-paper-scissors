@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 import styles from './Button.module.scss';
 
 type Props = {
-  showModale: React.Dispatch<React.SetStateAction<boolean>>
+  onClick: MouseEventHandler<HTMLButtonElement>;
+  text: string;
+  className?: string;
 }
 
-const Button: React.FC<Props> = ({ showModale }) => {
+const Button: React.FC<Props> = ({ onClick, text, className }) => {
   return (
     <button
-      className={styles.button}
+      className={`${styles.button} ${className ? styles[className] : ''}`}
       type='button'
-      onClick={() => showModale(true)}
+      onClick={onClick}
     >
-      Rules
+      {text}
     </button>
   )
 }

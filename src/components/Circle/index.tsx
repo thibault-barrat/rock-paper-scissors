@@ -6,19 +6,37 @@ import styles from "./Circle.module.scss";
 
 type Props = {
   type: "rock" | "paper" | "scissors";
-  setItemChosenByUser?: React.Dispatch<React.SetStateAction<"rock" | "paper" | "scissors" | null>>;
+  setItemChosenByUser?: React.Dispatch<
+    React.SetStateAction<"rock" | "paper" | "scissors" | null>
+  >;
   disabled?: boolean;
   className?: string;
+  winner?: boolean | null;
 };
 
-const Circle: React.FC<Props> = ({ type, setItemChosenByUser, disabled, className }) => {
+const Circle: React.FC<Props> = ({
+  type,
+  setItemChosenByUser,
+  disabled,
+  className,
+  winner,
+}) => {
   const handleClick = () => {
     if (setItemChosenByUser) {
       setItemChosenByUser(type);
     }
   };
   return (
-    <button className={`${styles.circle} ${styles[type]} ${className ? styles[className] : ""}`} type="button" aria-label="Paper" onClick={handleClick} disabled={disabled}>
+    <button
+      className={`${styles.circle} ${styles[type]} ${
+        className ? styles[className] : ""
+      }`}
+      type="button"
+      aria-label="Paper"
+      onClick={handleClick}
+      disabled={disabled}
+    >
+      {winner && <div className={styles.winner}></div>}
       <div className={styles.icon}>
         {type === "rock" && <img src={rock} alt="Rock icon" />}
         {type === "paper" && <img src={paper} alt="Paper icon" />}

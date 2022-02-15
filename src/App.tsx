@@ -13,8 +13,8 @@ function App() {
     <div className={styles.app}>
       {showRules && <RulesModale closeModale={setShowRules} />}
       <Heading score={score} />
-      <Game />
-      <Button showModale={setShowRules} />
+      <Game setScore={setScore} score={score} />
+      <Button onClick={() => setShowRules(true)} text="Rules" />
       <Attribution />
     </div>
   );
