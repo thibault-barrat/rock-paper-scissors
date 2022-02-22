@@ -100,18 +100,7 @@
 .afterStepOne {
   cursor: auto;
   left: 0;
-  top: 0;
-  bottom: unset;
-  right: unset;
-  transform: none;
-}
-
-.afterStepOneComputer {
-  cursor: auto;
-  top: 0;
-  right: 0;
-  left: unset;
-  bottom: unset;
+  position: relative;
   transform: none;
 }
 
