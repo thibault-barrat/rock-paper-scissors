@@ -4,14 +4,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  align-self: stretch;
   border: 2px solid vars.$header-outline;
   border-radius: 5px;
   padding: 10px;
+  width: 100%;
+  max-width: 700px;
+  @media screen and (min-width: vars.$breakpoint) {
+    border-radius: 10px;
+    padding: 16px 20px;
+  }
 }
 
 .logo {
   height: 50px;
+  @media screen and (min-width: vars.$breakpoint) {
+    height: 90px;
+  }
 }
 
 .scoreContainer {
@@ -27,10 +35,18 @@
   justify-content: space-between;
   align-items: center;
   font-size: 0.7rem;
+  @media screen and (min-width: vars.$breakpoint) {
+    width: 150px;
+    height: 115px;
+    font-size: 1rem;
+  }
 }
 
 .score {
   font-size: 2rem;
   font-weight: 700;
-  color: vars.$dark-text
+  color: vars.$dark-text;
+  @media screen and (min-width: vars.$breakpoint) {
+    font-size: 3.5rem;
+  }
 }

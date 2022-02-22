@@ -116,17 +116,17 @@ const Game: React.FC<Props> = ({ setScore, score }) => {
       {step !== 1 && itemChosenByUser && (
         <>
           <Circle type={itemChosenByUser} disabled className="afterStepOne" winner={step === 4 && winner === "user"} />
-          <p>You picked</p>
+          <p className={styles.text}>You picked</p>
           {step === 2 && <div className={styles.computer}></div>}
           {step !== 2 && itemChosenByComputer && (
             <Circle
               type={itemChosenByComputer}
               disabled
-              className="afterStepOne"
+              className="afterStepOneComputer"
               winner={step === 4 && winner === "computer"}
             />
           )}
-          <p>The house picked</p>
+          <p className={styles.text}>The house picked</p>
           <div className={styles.result}>
             {step === 4 && (
               <>

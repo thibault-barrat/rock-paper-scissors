@@ -12,6 +12,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  @media screen and (min-width: vars.$breakpoint) {
+    width: 400px;
+    height: 415px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 35px;
+    justify-content: space-between;
+  }
 }
 
 .title {
@@ -19,9 +29,17 @@
   font-weight: 600;
   color: vars.$dark-text;
   text-transform: uppercase;
+  @media screen and (min-width: vars.$breakpoint) {
+    align-self: flex-start;
+  }
 }
 
 .close {
   background: transparent;
   border: none;
+  @media screen and (min-width: vars.$breakpoint) {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+  }
 }

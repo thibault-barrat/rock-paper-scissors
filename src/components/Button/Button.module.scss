@@ -18,6 +18,9 @@
     border-color: #fff;
     color: vars.$dark-text;
   }
+  @media screen and (min-width: vars.$breakpoint) {
+    align-self: flex-end;
+  }
 }
 
 .inverted {

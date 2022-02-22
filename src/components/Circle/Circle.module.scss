@@ -2,8 +2,8 @@
 
 .circle {
   position: absolute;
-  width: 130px;
-  height: 130px;
+  width: 42%;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   border: none;
   padding: 0;
@@ -33,8 +33,8 @@
 
 .icon {
   background: #bcbdcf;
-  width: 100px;
-  height: 100px;
+  width: 75%;
+  height: 75%;
   border-radius: 50%;
   margin: 0 auto;
   display: flex;
@@ -55,6 +55,9 @@
     z-index: -1;
     transform-origin: bottom;
     transform: scaleY(0.95);
+  }
+  img {
+    width: 43%;
   }
 }
 
@@ -97,7 +100,18 @@
 .afterStepOne {
   cursor: auto;
   left: 0;
-  position: relative;
+  top: 0;
+  bottom: unset;
+  right: unset;
+  transform: none;
+}
+
+.afterStepOneComputer {
+  cursor: auto;
+  top: 0;
+  right: 0;
+  left: unset;
+  bottom: unset;
   transform: none;
 }
 

@@ -8,12 +8,6 @@
 }
 
 .afterStepOne {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto;
-  grid-auto-flow: column;
-  justify-items: center;
-  align-items: center;
   width: 100%;
   p {
     text-transform: uppercase;
@@ -22,22 +16,39 @@
     letter-spacing: 0.15em;
     margin-top: 25px;
     z-index: 10;
+    text-align: center;
+  }
+  .text {
+    margin-top: 50%;
+    display: inline-block;
+    position: relative;
+    width: 42%;
+  }
+  & > p:last-of-type {
+    float: right;
+    display: flex;
+    justify-content: center;
+    @media screen and (min-width: 300px) {
+      white-space: nowrap;
+    }
   }
 }
 
 .computer {
-  width: 110px;
-  height: 110px;
+  width: 35%;
+  background: red;
+  position: absolute;
+  aspect-ratio: 1 / 1;
+  top: 3%;
+  right: 3%;
   border-radius: 50%;
-  background:  	hsl(220, 46%, 19%);
+  background: hsl(220, 46%, 19%);
 }
 
 .result {
   width: 100%;
   height: 200px;
   font-size: 3.1rem;
-  grid-row: 3;
-  grid-column: 1 / span 2;
   display: flex;
   flex-direction: column;
   align-items: center;
