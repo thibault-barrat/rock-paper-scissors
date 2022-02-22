@@ -7,6 +7,8 @@
   border-radius: 50%;
   border: none;
   padding: 0;
+  grid-row: 1;
+  grid-column: 1;
   &::before {
     content: "";
     position: absolute;
@@ -102,6 +104,17 @@
   left: 0;
   position: relative;
   transform: none;
+  width: 100%;
+}
+
+.afterStepOneComputer {
+  cursor: auto;
+  left: 0;
+  position: relative;
+  transform: none;
+  width: 100%;
+  grid-row: 1;
+  grid-column: 3;
 }
 
 .winner {

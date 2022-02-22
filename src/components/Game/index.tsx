@@ -122,7 +122,7 @@ const Game: React.FC<Props> = ({ setScore, score }) => {
             <Circle
               type={itemChosenByComputer}
               disabled
-              className="afterStepOne"
+              className="afterStepOneComputer"
               winner={step === 4 && winner === "computer"}
             />
           )}
