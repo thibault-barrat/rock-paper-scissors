@@ -9,6 +9,7 @@
   padding: 10px;
   width: 100%;
   max-width: 700px;
+  z-index: 10;
   @media screen and (min-width: vars.$breakpoint) {
     border-radius: 10px;
     padding: 16px 20px;

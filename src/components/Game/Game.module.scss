@@ -1,3 +1,5 @@
+@use "../../styles/vars";
+
 .game {
   position: relative;
 }
@@ -19,7 +21,7 @@
     text-align: center;
   }
   .text {
-    margin-top: 50%;
+    margin-top: 47%;
     display: inline-block;
     position: relative;
     width: 42%;

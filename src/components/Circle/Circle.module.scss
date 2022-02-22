@@ -88,7 +88,7 @@
 .rock {
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 25%);
   &::before {
     background: hsl(349, 75%, 35%);
   }
