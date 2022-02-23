@@ -1,0 +1,53 @@
+@use "../../styles/vars";
+
+.container {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.choice {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.012em;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  &:checked + .switch .slider::before {
+   transform: translateX(26px);
+  }
+}
+
+.switch {
+  width: 58px;
+  height: 32px;
+  margin: 0 18px 0 14px;
+  position: relative;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  border-radius: 34px;
+  &::before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 4px;
+    background-color: hsl(214, 47%, 23%);
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+}
