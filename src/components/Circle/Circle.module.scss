@@ -9,6 +9,10 @@
   padding: 0;
   grid-row: 1;
   grid-column: 1;
+  @media screen and (min-width: vars.$breakpoint) {
+    grid-row: 2;
+    grid-column: 1;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -115,6 +119,10 @@
   width: 100%;
   grid-row: 1;
   grid-column: 3;
+  @media screen and (min-width: vars.$breakpoint) {
+    grid-row: 2;
+    grid-column: 3;
+  }
 }
 
 .winner {
