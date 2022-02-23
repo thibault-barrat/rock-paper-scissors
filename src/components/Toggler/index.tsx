@@ -1,12 +1,10 @@
 import React from "react";
+import { useContext } from "react";
+import { DifficultyContext } from "../../utils/context";
 import styles from "./Toggler.module.scss";
 
-type Props = {
-  isHard: boolean;
-  setIsHard: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-const Toggler: React.FC<Props> = ({ isHard, setIsHard }) => {
+const Toggler = () => {
+  const { isHard, toggleDifficulty } = useContext(DifficultyContext);
   return (
     <div className={styles.container}>
       <p className={styles.choice}>Easy</p>
@@ -16,7 +14,7 @@ const Toggler: React.FC<Props> = ({ isHard, setIsHard }) => {
         type="checkbox"
         id="toggle"
         name="toggle"
-        onClick={() => setIsHard(!isHard)}
+        onClick={() => toggleDifficulty()}
       />
       <label htmlFor="toggle" className={styles.switch}>
         <span className={styles.slider}></span>

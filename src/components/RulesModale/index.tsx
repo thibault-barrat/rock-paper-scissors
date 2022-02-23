@@ -13,7 +13,6 @@ const RulesModale: React.FC<Props> = ({ closeModale }) => {
     <div className={styles.container}>
       <h2 className={styles.title}>Rules</h2>
       <ImageRules />
-      {/* <img src={rules} className={styles.rules} alt="Rock beats scissors, scissors beats paper, paper beats rock" /> */}
       <button
         className={styles.close}
         type="button"
