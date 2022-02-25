@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { DifficultyContext } from "../../utils/context";
 import styles from "./Game.module.scss";
 import triangle from "../../assets/bg-triangle.svg";
+import pentagon from "../../assets/bg-pentagon.svg";
 import Circle from "../Circle";
 import Button from "../Button";
 
@@ -11,13 +13,14 @@ type Props = {
 
 const Game: React.FC<Props> = ({ setScore, score }) => {
   const [itemChosenByUser, setItemChosenByUser] = useState<
-    "rock" | "paper" | "scissors" | null
+    "rock" | "paper" | "scissors" | "lizard" | "spock" | null
   >(null);
   const [itemChosenByComputer, setItemChosenByComputer] = useState<
-    "rock" | "paper" | "scissors" | null
+    "rock" | "paper" | "scissors" | "lizard" | "spock" | null
   >(null);
   const [winner, setWinner] = useState<"user" | "computer" | null>(null);
   const [step, setStep] = useState<1 | 2 | 3 | 4>(1);
+  const { isHard } = useContext(DifficultyContext);
 
   // 1. User chooses an item
   // 2. Computer chooses an item
@@ -31,12 +34,15 @@ const Game: React.FC<Props> = ({ setScore, score }) => {
     // function to choose randomly an item
     // which is different from the item chosen by the user
     const chooseItem = () => {
-      const items: ("rock" | "paper" | "scissors")[] = [
+      const items: ("rock" | "paper" | "scissors" | "lizard" | "spock")[] = [
         "rock",
         "paper",
         "scissors",
       ];
-      let randomItem: "rock" | "paper" | "scissors" | null = null;
+      if (isHard) {
+        items.push("lizard", "spock");
+      };
+      let randomItem: "rock" | "paper" | "scissors" | "lizard" | "spock" | null = null;
       while (!randomItem || randomItem === itemChosenByUser) {
         randomItem = items[Math.floor(Math.random() * items.length)];
       }
@@ -75,9 +81,23 @@ const Game: React.FC<Props> = ({ setScore, score }) => {
           ? null
           : itemChosenByUser === "rock" && itemChosenByComputer === "scissors"
           ? "user"
+          : itemChosenByUser === "rock" && itemChosenByComputer === "lizard"
+          ? "user"
           : itemChosenByUser === "paper" && itemChosenByComputer === "rock"
           ? "user"
+          : itemChosenByUser === "paper" && itemChosenByComputer === "spock"
+          ? "user"
           : itemChosenByUser === "scissors" && itemChosenByComputer === "paper"
+          ? "user"
+          : itemChosenByUser === "scissors" && itemChosenByComputer === "lizard"
+          ? "user"
+          : itemChosenByUser === "lizard" && itemChosenByComputer === "paper"
+          ? "user"
+          : itemChosenByUser === "lizard" && itemChosenByComputer === "spock"
+          ? "user"
+          : itemChosenByUser === "spock" && itemChosenByComputer === "rock"
+          ? "user"
+          : itemChosenByUser === "spock" && itemChosenByComputer === "scissors"
           ? "user"
           : "computer";
       setWinner(winner);
@@ -107,10 +127,12 @@ const Game: React.FC<Props> = ({ setScore, score }) => {
     <div className={`${styles.game} ${step === 1 ? "" : styles.afterStepOne}`}>
       {step === 1 && (
         <>
-          <img className={styles.background} src={triangle} alt="" />
+          <img className={`${styles.background} ${isHard ? styles.hard : ''}`} src={isHard ? pentagon : triangle} alt="" />
           <Circle type="paper" setItemChosenByUser={setItemChosenByUser} />
           <Circle type="scissors" setItemChosenByUser={setItemChosenByUser} />
           <Circle type="rock" setItemChosenByUser={setItemChosenByUser} />
+          {isHard && <Circle type="lizard" setItemChosenByUser={setItemChosenByUser} />}
+          {isHard && <Circle type="spock" setItemChosenByUser={setItemChosenByUser} />}
         </>
       )}
       {step !== 1 && itemChosenByUser && (

@@ -3,11 +3,15 @@
 .game {
   position: relative;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .background {
   padding: 0 55px;
   width: 100%;
+  &.hard {
+    padding: 0 40px;
+  }
 }
 
 .afterStepOne {

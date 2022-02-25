@@ -37,6 +37,10 @@
   }
 }
 
+.hard {
+  width: 32%;
+}
+
 .icon {
   background: #bcbdcf;
   width: 75%;
@@ -77,6 +81,12 @@
   &::after {
     background: vars.$paper-gradient;
   }
+  &.hard:not(.afterStepOne):not(.afterStepOneComputer) {
+    top: 15%;
+    left: unset;
+    right: 0;
+    transform: none;
+  }
 }
 
 .scissors {
@@ -89,6 +99,10 @@
   &::after {
     background: vars.$scissors-gradient;
   }
+  &.hard:not(.afterStepOne):not(.afterStepOneComputer) {
+    right: 50%;
+    transform:   translate(50%,-50%);
+  }
 }
 
 .rock {
@@ -100,6 +114,37 @@
   }
   &::after {
     background: vars.$rock-gradient;
+  }
+  &.hard:not(.afterStepOne):not(.afterStepOneComputer) {
+    left: 60%;
+    transform: translate(0, 50%);
+  }
+}
+
+.lizard {
+  &:not(.afterStepOne):not(.afterStepOneComputer) {
+    bottom: 0;
+    right: 60%;
+    transform: translate(0, 50%);
+  }
+  &::before {
+    background: hsl(261, 51%, 45%);
+  }
+  &::after {
+    background: vars.$lizard-gradient;
+  }
+}
+
+.spock {
+  &:not(.afterStepOne):not(.afterStepOneComputer) {
+    top: 15%;
+    left: 0;
+  }
+  &::before {
+    background: hsl(194, 60%, 42%);
+  }
+  &::after {
+    background: vars.$cyan;
   }
 }
 

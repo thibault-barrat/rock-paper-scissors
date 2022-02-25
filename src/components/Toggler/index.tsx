@@ -14,7 +14,8 @@ const Toggler = () => {
         type="checkbox"
         id="toggle"
         name="toggle"
-        onClick={() => toggleDifficulty()}
+        onChange={() => toggleDifficulty()}
+        checked={isHard}
       />
       <label htmlFor="toggle" className={styles.switch}>
         <span className={styles.slider}></span>
