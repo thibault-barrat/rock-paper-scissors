@@ -1,6 +1,6 @@
 # Frontend Mentor - Rock, Paper, Scissors solution
 
-This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -26,12 +26,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Screenshot](./Firefox_Screenshot_2022-02-25T13-20-28.992Z.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/rock-paper-scissors-with-react-and-typescript-shbFSsmiP](https://www.frontendmentor.io/solutions/rock-paper-scissors-with-react-and-typescript-shbFSsmiP)
+- Live Site URL: [https://rock-paper-scissors-brin66vn8-thibault-barrat.vercel.app/](https://rock-paper-scissors-brin66vn8-thibault-barrat.vercel.app/)
 
 ## My process
 
