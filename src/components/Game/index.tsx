@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, useCallback } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { DifficultyContext } from "../../utils/context";
 import styles from "./Game.module.scss";
 import triangle from "../../assets/bg-triangle.svg";

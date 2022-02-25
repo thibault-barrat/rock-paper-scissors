@@ -1,5 +1,4 @@
 import React from "react";
-import rules from "../../assets/image-rules.svg";
 import styles from "./RulesModale.module.scss";
 import close from "../../assets/icon-close.svg";
 import ImageRules from "../ImageRules";
