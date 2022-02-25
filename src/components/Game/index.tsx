@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useCallback } from "react";
 import { DifficultyContext } from "../../utils/context";
 import styles from "./Game.module.scss";
 import triangle from "../../assets/bg-triangle.svg";
@@ -57,6 +57,7 @@ const Game: React.FC<Props> = ({ setScore, score }) => {
       }, 500);
       return () => clearTimeout(timer);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [itemChosenByUser]);
 
   // when we move to step 3
@@ -114,6 +115,7 @@ const Game: React.FC<Props> = ({ setScore, score }) => {
         setScore(score - 1);
       }
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [winner, step]);
 
   const handlePlayAgain = () => {
